@@ -19,7 +19,7 @@ return {
       -- refer to the configuration section below
     },
     event = "User AstroFile",
-    cmd = { "TodoQuickFix" },
+    cmd = { "TodoQuickFix", "TodoTelescope" },
     keys = {
       {
 
@@ -29,4 +29,37 @@ return {
       },
     },
   },
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    keys = {
+      {
+        "<leader>M",
+        "<cmd>:MarkdownPreview<cr>",
+        desc = "Preview current markdown file"
+      }
+    },
+    ft = { "markdown" },
+    build = function() vim.fn["mkdp#util#install"]() end,
+  },
+  {
+	"L3MON4D3/LuaSnip",
+	-- follow latest release.
+	version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+	-- install jsregexp (optional!).
+	build = "make install_jsregexp",
+  require("luasnip.loaders.from_snipmate").lazy_load({ paths = { "./lua/user/snippets" } }),
+	require("luasnip").config.set_config({
+	    store_selection_keys = '<c-s>',
+	  }),
+  },
+  -- {
+  --   "l3mon4d3/luasnip",
+  --   config = function(plugin, opts)
+  --     require "plugins.configs.luasnip"(plugin, opts) -- include the default astronvim config that calls the setup call
+  --     -- add more custom luasnip configuration such as filetype extend or custom snippets
+  --     local luasnip = require "luasnip"
+  --     luasnip.filetype_extend("javascript", { "javascriptreact" })
+  --   end,
+  -- },
 }

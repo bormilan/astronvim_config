@@ -1,0 +1,9 @@
+{
+  "setup": {
+        "description": "Print given expression to shell",
+        "prefix": ["print", "template"],
+        "body": [
+            "io:format(\"${2:[${TM_LINE_NUMBER}] ~p~n}\", [${TM_SELECTED_TEXT:${1:ok}}])"
+        ]
+  }
+}

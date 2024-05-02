@@ -1,0 +1,19 @@
+
+{
+  "setup": {
+		"prefix": ["yaml_skeleton", "template"]
+		, "body": [
+		    "openapi: 3.0.0"
+		  , "info:"
+      , "  description: KVRPOC PI API"
+      , "  title: KVRPOC PI API"
+      , "  version: '0.0.1'"
+      , "paths:"
+      , "components:"
+      , "  schemas:"
+      , "  requestBodies:"
+      , "  responses:"
+		]
+		, "description": "Make a skeleton for a yaml interface definition file."
+	} 
+}

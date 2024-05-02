@@ -5,4 +5,5 @@ return {
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
 
   { import = "astrocommunity.colorscheme.gruvbox-nvim" },
+  { import = "astrocommunity.note-taking.obsidian-nvim" }
 }

@@ -1,0 +1,11 @@
+{
+  "setup": {
+		"prefix": ["spec", "template"],
+		"body": ["-spec myfun(A, B) -> Result when",
+				"    A :: any(),",
+				"    B :: any(),",
+				"    Result :: any()."
+		],
+		"description": "Basic specification"
+	} 
+}

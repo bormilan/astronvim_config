@@ -1,0 +1,12 @@
+{
+  "setup": {
+		"prefix": ["fun_with_spec", "template"],
+    "body": [
+        "-spec ${1:foo${TM_LINE_NUMBER}}(${2/\\s*([^,\\s]+)\\s*(,?)/$1${2:+, }/g}) -> ${3:Result}",
+        "  when ${2/\\s*([^,\\s]+)\\s*(,?)/$1 :: any(),\n       /g}$3 :: ${4|ok,boolean(),any()|}.",
+        "$1(${2/\\s*([^,\\s]+)\\s*(,?)/$1${2:+, }/g}) ->",
+        "  ${5:ok}."
+    ],
+		"description": "Basic specification"
+	} 
+}
