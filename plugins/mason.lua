@@ -11,6 +11,7 @@ return {
         "erlangls",
         "elixirls",
         "marksman",
+        "hydra_lsp"
       })
     end,
   },

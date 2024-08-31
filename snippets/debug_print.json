@@ -3,9 +3,9 @@
         "description": "Print given expression to shell, for debugging",
         "prefix": ["debug_print", "template"],
         "body": [
-            "io:format(\"------------------------------------------------------------\")",
-            "io:format(\"${2:[${TM_LINE_NUMBER}] ~p~n}\", [${TM_SELECTED_TEXT:${1:ok}}])",
-            "io:format(\"------------------------------------------------------------\")"
+            "io:format(user, \"------------------------------------------------------------~n\", []),",
+            "io:format(user, \"${2:[${TM_LINE_NUMBER}] ~p~n}\", [${TM_SELECTED_TEXT:${1:ok}}]),",
+            "io:format(user, \"------------------------------------------------------------~n\", []),"
         ]
   }
 }
